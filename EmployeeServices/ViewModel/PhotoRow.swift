@@ -10,20 +10,22 @@ import SwiftUI
 
 struct PhotoRow: View {
     var employee: Employee
+    var photo: UIImage
     
     var body: some View {
-        HStack { // 1
-            Image(uiImage: employee.profilePicture) // 2
-                .resizable() // 3
-                .frame(width: 20, height: 20) // 4
-            Text(employee.name)
-            Spacer() // 6
+        HStack {
+            Image(uiImage: photo)
+                .renderingMode(.original)
+                .resizable()
+                .frame(width: 30, height: 30)
+            Text(employee.employee_name)
+            Spacer()
         }
     }
 }
 
 struct PhotoRow_Previews: PreviewProvider {
     static var previews: some View {
-        PhotoRow(employee: Employee(id: "1", name: "jack tylor", profilePicture: UIImage(systemName: "photo")!))
+        PhotoRow(employee: Employee(id: "1", employee_name: "jack tylor"), photo: UIImage())
     }
 }

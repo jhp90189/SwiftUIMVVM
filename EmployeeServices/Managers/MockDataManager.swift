@@ -15,15 +15,21 @@ class MockDataManager {
     
     init() {
         employees = [
-            Employee(id: "2", name: "Nick Taylor", profilePicture: UIImage(systemName: "photo")!),
-            Employee(id: "12", name: "Rajesh Sammita", profilePicture: UIImage(systemName: "photo")!),
-            Employee(id: "20", name: "Doris Wilder", profilePicture: UIImage(systemName: "photo")!)
+            Employee(id: "2", employee_name: "Nick Taylor"),
+            Employee(id: "12", employee_name: "Rajesh Sammita"),
+            Employee(id: "20", employee_name: "Doris Wilder")
         ]
     }
 }
 
 extension MockDataManager: DataManagerProtocol {
-    func fetchEmployees() -> [Employee] {
-        return employees
+    func fetchEmployees(completion: @escaping ((Result<EmployeeServiceResponse>) -> Void)) {
+        completion(.success(EmployeeServiceResponse(status: "success", data: employees)))
     }
+    
+    func fetchPhotoForEmployee(employeeID: String) -> UIImage? {
+        return UIImage(systemName: "photo")
+    }
+    
+    func addPhotoForEmployee(employeeID: String, image: UIImage) { }
 }

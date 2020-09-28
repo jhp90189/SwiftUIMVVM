@@ -9,8 +9,12 @@
 import Foundation
 import SwiftUI
 
-struct Employee: Identifiable {
+struct Employee: Identifiable, Codable {
     var id: String
-    var name: String
-    var profilePicture: UIImage
+    var employee_name: String
+}
+
+struct EmployeeServiceResponse: Codable {
+    var status: String
+    var data: [Employee]
 }
