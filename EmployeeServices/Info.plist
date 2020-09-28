@@ -48,6 +48,8 @@
 	<string>App access camera to take picture for employee</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>App access photo library to choose picture for employee</string>
+	<key>UIUserInterfaceStyle</key>
+	<string>Light</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

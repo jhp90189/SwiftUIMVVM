@@ -47,8 +47,12 @@ public struct ImagePickerView: UIViewControllerRepresentable {
         }
 
         public func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
+            var flippedImage : UIImage?
             if let image = info[.originalImage] as? UIImage {
-                self.onImagePicked(image)
+                if let cg = image.cgImage {
+                    flippedImage = UIImage(cgImage: cg, scale: 1.0, orientation: UIImage.Orientation.downMirrored)
+                }
+                self.onImagePicked(flippedImage ?? image)
             }
             self.onDismiss()
         }
