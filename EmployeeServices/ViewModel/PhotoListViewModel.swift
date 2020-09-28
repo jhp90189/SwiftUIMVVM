@@ -34,7 +34,8 @@ final class PhotoListViewModel: ObservableObject {
 extension PhotoListViewModel: PhotoListViewModelProtocol {
     
     func fetchPhotoForEmployee(employeeID: String) -> UIImage {
-        return dataManager.fetchPhotoForEmployee(employeeID: employeeID) ?? UIImage()
+        let defaultImage = UIImage(systemName: "photo") ?? UIImage()
+        return dataManager.fetchPhotoForEmployee(employeeID: employeeID) ?? defaultImage
     }
     
     func savePhotoForEmployee(employeeID: String, image: UIImage) {

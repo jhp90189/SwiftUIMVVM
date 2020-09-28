@@ -18,7 +18,8 @@ struct PhotoRow: View {
             Image(uiImage: photo)
                 .renderingMode(.original)
                 .resizable()
-                .frame(width: 30, height: 30)
+                .frame(width: 50, height: 50)
+                .cornerRadius(25)
             Text(employee.employee_name)
             Spacer()
         }
