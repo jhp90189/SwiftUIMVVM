@@ -18,6 +18,7 @@ protocol PhotoListViewModelProtocol {
     func savePhotoForEmployee(employeeID: String, image: UIImage)
 }
 
+// Viewmodel class which acts as a mediator between data manager and view
 final class PhotoListViewModel: ObservableObject {
     @Published var employees = [Employee]()
     @Published var fetchInProgress: Bool = false

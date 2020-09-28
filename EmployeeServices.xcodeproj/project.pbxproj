@@ -25,6 +25,7 @@
 		18C978272521E391004C7531 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C978262521E391004C7531 /* APIClient.swift */; };
 		18C978292521E710004C7531 /* EmployeeAPIServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C978282521E710004C7531 /* EmployeeAPIServices.swift */; };
 		18C9782B2521EB59004C7531 /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C9782A2521EB58004C7531 /* ImagePickerView.swift */; };
+		18C9782E2521F76E004C7531 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 18C978302521F76E004C7531 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		18C978262521E391004C7531 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		18C978282521E710004C7531 /* EmployeeAPIServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeAPIServices.swift; sourceTree = "<group>"; };
 		18C9782A2521EB58004C7531 /* ImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
+		18C9782F2521F76E004C7531 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 				18C16AE5251F4B1C0057D537 /* Assets.xcassets */,
 				18C16AEA251F4B1C0057D537 /* LaunchScreen.storyboard */,
 				18C16AED251F4B1C0057D537 /* Info.plist */,
+				18C978302521F76E004C7531 /* Localizable.strings */,
 				18C16AE7251F4B1C0057D537 /* Preview Content */,
 			);
 			path = EmployeeServices;
@@ -262,6 +265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18C16AEC251F4B1C0057D537 /* LaunchScreen.storyboard in Resources */,
+				18C9782E2521F76E004C7531 /* Localizable.strings in Resources */,
 				18C16AE9251F4B1C0057D537 /* Preview Assets.xcassets in Resources */,
 				18C16AE6251F4B1C0057D537 /* Assets.xcassets in Resources */,
 			);
@@ -323,6 +327,14 @@
 				18C16AEB251F4B1C0057D537 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		18C978302521F76E004C7531 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				18C9782F2521F76E004C7531 /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

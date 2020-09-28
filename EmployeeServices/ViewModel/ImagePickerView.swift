@@ -8,6 +8,7 @@
 
 import SwiftUI
 
+// View for image picker for fetching photo from camera or photo library
 public struct ImagePickerView: UIViewControllerRepresentable {
 
     private let sourceType: UIImagePickerController.SourceType

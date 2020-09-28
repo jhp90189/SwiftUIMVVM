@@ -8,6 +8,7 @@
 
 import SwiftUI
 
+//Photorow is object of a cell in list , represent individual employee view
 struct PhotoRow: View {
     var employee: Employee
     var photo: UIImage

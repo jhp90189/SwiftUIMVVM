@@ -13,6 +13,7 @@ enum ImagePickerViewMode {
     case camera
 }
 
+// PhotoListView fetch list of employee from service shows as list
 struct PhotoListView: View {
     @ObservedObject var viewModel = PhotoListViewModel()
     @State private var showingAlert = false
@@ -30,24 +31,25 @@ struct PhotoListView: View {
                     PhotoRow(employee: employee, photo: self.viewModel.fetchPhotoForEmployee(employeeID: employee.id))
                 }
             }
-            .navigationBarTitle(Text("Employees"))
+        .navigationBarTitle(Text(NSLocalizedString("employee_list_title", comment: "")))
+            
         }
         .onAppear {
             self.viewModel.fetchEmployees()
         }
         .listStyle(GroupedListStyle())
         .actionSheet(isPresented: $showingAlert) {
-            ActionSheet(title: Text("Change Profile Picture"),
+            ActionSheet(title: Text(NSLocalizedString("change_picture_title", comment: "")),
                         message: nil,
                         buttons: [
                             .default(
-                                Text("Take a Photo"),
+                                Text(NSLocalizedString("take_photo_button", comment: "")),
                                 action: {
                                     self.isImagePickerPresented = true
                                     self.pickerMode = (UIImagePickerController.isSourceTypeAvailable(.camera)) ? .camera : .photoLibrary
                             }),
                             .default(
-                                Text("Choose a Photo"),
+                                Text(NSLocalizedString("choose_photo_button", comment: "")),
                                 action: {
                                     self.isImagePickerPresented = true
                                     self.pickerMode = .photoLibrary

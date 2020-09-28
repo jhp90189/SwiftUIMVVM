@@ -2,13 +2,14 @@
 //  CoreDataHelper.swift
 //  DemoToDoList
 //
-//  Created by alex.zarr on 5/23/20.
-//  Copyright © 2020 alexzarr. All rights reserved.
+//  Created by Rajesh Sammita on 5/23/20.
+//  Copyright © 2020 Rajesh Sammita. All rights reserved.
 //
 
 import Foundation
 import CoreData
 
+//CoreDataHelper contains generic methods to interact with coredata
 class CoreDataHelper: DBHelperProtocol {
     static let shared = CoreDataHelper()
     

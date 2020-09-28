@@ -9,8 +9,8 @@
 import Foundation
 import SwiftUI
 
+// Mock data manager for offline mode
 class MockDataManager {
-    
     private var employees = [Employee]()
     
     init() {

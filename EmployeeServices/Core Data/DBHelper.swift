@@ -2,8 +2,8 @@
 //  DBHelper.swift
 //  DBHelper
 //
-//  Created by Alex Zarr on 2020-02-24.
-//  Copyright © 2020 alexzarr. All rights reserved.
+//  Created by Rajesh Sammita on 2020-02-24.
+//  Copyright © 2020 Rajesh Sammita. All rights reserved.
 //
 
 import Foundation

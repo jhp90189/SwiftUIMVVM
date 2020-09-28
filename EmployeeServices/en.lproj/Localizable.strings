@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  EmployeeServices
+
+  Created by Apple on 28/09/20.
+  Copyright © 2020 Rajesh Sammita. All rights reserved.
+*/
+"employee_list_title" = "Employees";
+"change_picture_title" = "Change Profile Picture";
+"take_photo_button" = "Take a Photo";
+"choose_photo_button" = "Choose a Photo";
+
+

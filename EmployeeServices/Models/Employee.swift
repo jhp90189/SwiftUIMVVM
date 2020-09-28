@@ -9,6 +9,7 @@
 import Foundation
 import SwiftUI
 
+//Model classes for the response of Employee services
 struct Employee: Identifiable, Codable {
     var id: String
     var employee_name: String

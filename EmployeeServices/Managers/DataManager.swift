@@ -15,6 +15,7 @@ protocol DataManagerProtocol {
     func addPhotoForEmployee(employeeID: String, image: UIImage)
 }
 
+//Manager class which manages all data and coordinate with Viewmodel
 class DataManager {
     static let shared = DataManager()
     var dbHelper: CoreDataHelper = CoreDataHelper.shared
