@@ -17,22 +17,33 @@ class EmployeeAPIServices {
     private var getEmployeesURL : String {
         return baseURL + "employees"
     }
+    private let shouldUseStubData = true
     //API call to fetch list of employees
     func fetchEmployees(completion: @escaping ((Result<EmployeeServiceResponse>) -> Void)) {
-        guard let employeeURL = URL(string: getEmployeesURL) else { return }
-        let resourse = Resource(url: employeeURL)
-        apiClient.load(resourse) { result in
-            switch result {
-            case . success(let data):
-                do {
+        if shouldUseStubData {
+            do {
+                if let filePath = Bundle.main.path(forResource: "service", ofType: "json") {
+                    let data = try Data(contentsOf: URL(fileURLWithPath: filePath))
                     let items = try JSONDecoder().decode(EmployeeServiceResponse.self, from: data)
                     completion(.success(items))
-                    
-                } catch {
+                }
+            } catch {}
+        } else {
+            guard let employeeURL = URL(string: getEmployeesURL) else { return }
+            let resourse = Resource(url: employeeURL)
+            apiClient.load(resourse) { result in
+                switch result {
+                case . success(let data):
+                    do {
+                        let items = try JSONDecoder().decode(EmployeeServiceResponse.self, from: data)
+                        completion(.success(items))
+                        
+                    } catch {
+                        completion(.failure(error))
+                    }
+                case .failure(let error):
                     completion(.failure(error))
                 }
-            case .failure(let error):
-                completion(.failure(error))
             }
         }
     }

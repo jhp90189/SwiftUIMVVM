@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18BD8BF725238D1E001C49FC /* service.json in Resources */ = {isa = PBXBuildFile; fileRef = 18BD8BF625238D1E001C49FC /* service.json */; };
 		18C16ADD251F4B150057D537 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C16ADC251F4B150057D537 /* AppDelegate.swift */; };
 		18C16ADF251F4B150057D537 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C16ADE251F4B150057D537 /* SceneDelegate.swift */; };
 		18C16AE2251F4B150057D537 /* EmployeeServices.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 18C16AE0251F4B150057D537 /* EmployeeServices.xcdatamodeld */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		18BD8BF625238D1E001C49FC /* service.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = service.json; sourceTree = "<group>"; };
 		18C16AD9251F4B150057D537 /* EmployeeServices.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmployeeServices.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18C16ADC251F4B150057D537 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18C16ADE251F4B150057D537 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 			children = (
 				18C978262521E391004C7531 /* APIClient.swift */,
 				18C978282521E710004C7531 /* EmployeeAPIServices.swift */,
+				18BD8BF625238D1E001C49FC /* service.json */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18C16AEC251F4B1C0057D537 /* LaunchScreen.storyboard in Resources */,
+				18BD8BF725238D1E001C49FC /* service.json in Resources */,
 				18C9782E2521F76E004C7531 /* Localizable.strings in Resources */,
 				18C16AE9251F4B1C0057D537 /* Preview Assets.xcassets in Resources */,
 				18C16AE6251F4B1C0057D537 /* Assets.xcassets in Resources */,
